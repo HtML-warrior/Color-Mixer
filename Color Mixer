@@ -1,0 +1,26 @@
+def main():
+    # Enter the primary colors
+    color1 = input("Enter the name of the first primary color (red, blue, or yellow): ").lower()
+    color2 = input("Enter the name of the second primary color (red, blue, or yellow): ").lower()
+
+    # Check to not stop code just in case of misspells and wrong input
+    # if color1 not in ['red', 'blue', 'yellow'] or color2 not in ['red', 'blue', 'yellow']:
+    #     print("Error: Invalid color input. Please enter red, blue, or yellow.")
+    #     return
+
+    # Prompt to determine secondary color
+    if (color1 == 'red' and color2 == 'blue') or (color1 == 'blue' and color2 == 'red'):
+        secondary_color = 'purple'
+    elif (color1 == 'red' and color2 == 'yellow') or (color1 == 'yellow' and color2 == 'red'):
+        secondary_color = 'orange'
+    elif (color1 == 'blue' and color2 == 'yellow') or (color1 == 'yellow' and color2 == 'blue'):
+        secondary_color = 'green'
+    else:
+        print("Error: Invalid color combination.")
+        return
+
+    # Display color
+    print(f"The secondary color is {secondary_color}.")
+
+if __name__ == "__main__":
+    main()
